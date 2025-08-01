@@ -24,7 +24,7 @@
 <%
 String deptno = request.getParameter("deptno");
 String sql="";
-if(deptno == null){
+if("".equals(deptno)||deptno == null){
 	sql= "select * from dept";
 }else{
 	sql="SELECT * FROM dept where deptno = " + deptno;
